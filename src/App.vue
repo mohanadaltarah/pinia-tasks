@@ -10,8 +10,12 @@
   </main>
 </template>
 
-<script>
-export default {}
+<script setup>
+import {useTaskStore} from "@/stores/TaskStore.js";
+
+const taskStore = useTaskStore();
+
+
 </script>
 
 <style lang="sass" scoped>
