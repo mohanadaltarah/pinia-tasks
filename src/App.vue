@@ -8,6 +8,12 @@
       <h1>Sirat tasks</h1>
     </header>
 
+    <!-- new task form   -->
+    <div class="new-task-form">
+      <TaskForm/>
+    </div>
+
+
     <!-- toggle nav    -->
     <nav class="filter">
       <button @click="filter='all'">All tasks</button>
@@ -34,6 +40,8 @@
 <script setup>
 import {useTaskStore} from "@/stores/TaskStore.js";
 import TaskDetails from "@/components/TaskDetails.vue";
+import TaskForm from "@/components/TaskForm.vue";
+
 import {ref} from "vue";
 
 const taskStore = useTaskStore();
