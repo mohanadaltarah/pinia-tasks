@@ -35,7 +35,7 @@ header h1 {
 }
 
 /* task-list */
-.task-list {
+.task-list, .favs-list {
     max-width: 640px;
     margin: 20px auto;
 }
@@ -64,4 +64,22 @@ header h1 {
     margin-left: 6px;
     cursor: pointer;
     color: #bbb
+}
+
+.filter {
+    width: 640px;
+    margin: 10px 20px;
+    text-align: end;
+
+}
+
+.filter button {
+    display: inline-block;
+    margin-left: 10px;
+    background: #ff3300;
+    color: white;
+    border: 2px solid #5555;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
 }

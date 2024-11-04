@@ -8,9 +8,23 @@
       <h1>Sirat tasks</h1>
     </header>
 
+    <!-- toggle nav    -->
+    <nav class="filter">
+      <button @click="filter='all'">All tasks</button>
+      <button @click="filter='favs'">Favorite tasks</button>
+    </nav>
+
     <!--  task list  -->
-    <div class="task-list">
+    <div v-if="filter === 'all'" class="task-list">
+      <p>{{ taskStore.countTotal }} tasks to do</p>
       <div v-for="task in taskStore.tasks" :key="task.id">
+        <TaskDetails :task="task"/>
+      </div>
+    </div>
+    <!-- favs list-->
+    <div v-if="filter === 'favs'" class="favs-list">
+      <p>{{ taskStore.countFavs }} favorite tasks to do</p>
+      <div v-for="task in taskStore.favs" :key="task.id">
         <TaskDetails :task="task"/>
       </div>
     </div>
@@ -20,8 +34,10 @@
 <script setup>
 import {useTaskStore} from "@/stores/TaskStore.js";
 import TaskDetails from "@/components/TaskDetails.vue";
+import {ref} from "vue";
 
 const taskStore = useTaskStore();
+const filter = ref("all");
 
 
 </script>
