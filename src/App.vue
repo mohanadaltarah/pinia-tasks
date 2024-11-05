@@ -21,6 +21,12 @@
     </nav>
 
     <!--  task list  -->
+
+    <!--    loading     -->
+    <div v-if="taskStore.loading === true" class="loading">
+      loading tasks.....
+    </div>
+
     <div v-if="filter === 'all'" class="task-list">
       <p>{{ taskStore.countTotal }} tasks to do</p>
       <div v-for="task in taskStore.tasks" :key="task.id">
@@ -38,13 +44,16 @@
 </template>
 
 <script setup>
-import {useTaskStore} from "@/stores/TaskStore.js";
 import TaskDetails from "@/components/TaskDetails.vue";
 import TaskForm from "@/components/TaskForm.vue";
 
 import {ref} from "vue";
+import {useTaskStore} from "@/stores/TaskStore.js";
 
 const taskStore = useTaskStore();
+
+taskStore.getTasks();
+
 const filter = ref("all");
 
 
