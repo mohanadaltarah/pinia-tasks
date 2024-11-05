@@ -1,19 +1,14 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "title": "Call my mother",
-      "isFav": true
-    },
-    {
       "id": "3",
       "title": "Assign tasks to Sirat team memebrs",
-      "isFav": true
+      "isFav": false
     },
     {
       "id": "4",
       "title": "Reach ot to Ayshah Hocam",
-      "isFav": false
+      "isFav": true
     }
   ]
 }
