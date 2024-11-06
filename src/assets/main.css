@@ -16,22 +16,29 @@ header {
     background: #e7e7e7;
     padding-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+
+.img-container {
+    min-width: 1000px;
+    height: 200px;
+    overflow: hidden;
 }
 
 header img {
-    max-width: 200px;
-    transform: rotate(-10deg);
+    min-width: 50%;
+    height: 100%;
+    object-fit: cover;
+
 }
 
 header h1 {
     margin: 0;
     font-size: 2em;
-    padding-top: 25px;
-    margin-left: 15px;
-    color: #777;
-    transform: rotate(2deg);
+    color: #051c31;
 }
 
 /* task-list */
@@ -129,4 +136,20 @@ form button {
     text-align: center;
     border-radius: 7px;
     padding: 20px;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.reset button {
+    padding: 10px;
+    background: indianred;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+
 }

@@ -2,7 +2,7 @@
   <main>
     <!--  heading  -->
     <header>
-      <div>
+      <div class="img-container">
         <img alt="" src="./assets/copy%2018-%20sirat.png">
       </div>
       <h1>Sirat tasks</h1>
@@ -40,8 +40,10 @@
         <TaskDetails :task="fav"/>
       </div>
     </div>
+    <div class="reset">
+      <button @click="taskStore.$reset">reset</button>
+    </div>
 
-    <button @click="taskStore.$reset">reset</button>
   </main>
 </template>
 
